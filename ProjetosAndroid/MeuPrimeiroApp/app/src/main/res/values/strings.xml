@@ -8,5 +8,9 @@
     <string name="login_user_pw_placeholder">Senha</string>
 
 
-    <string name="login_buttom_login">Logar</string>
+    <string name="login_buttom_login">Entrar</string>
+    <string name="login_buttom_Register">Cadastrar</string>
+    <string name="login_buttom_forgotPw">Esqueci a Senha</string>
+    <string name="login_succefull">Login efetuado com SUCESSO!!!!</string>
+
 </resources>
