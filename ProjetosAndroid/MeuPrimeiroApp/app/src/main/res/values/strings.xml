@@ -12,5 +12,8 @@
     <string name="login_buttom_Register">Cadastrar</string>
     <string name="login_buttom_forgotPw">Esqueci a Senha</string>
     <string name="login_succefull">Login efetuado com SUCESSO!!!!</string>
+    <string name="login_user_forgotPw_message">Implementar funcionalida </string>
 
+    <string name="login_user_name_empty">Nome de usario não pode ser vazio</string>
+    <string name="login_user_pw_empty">Senha de usuario não pode ser vazio</string>
 </resources>
