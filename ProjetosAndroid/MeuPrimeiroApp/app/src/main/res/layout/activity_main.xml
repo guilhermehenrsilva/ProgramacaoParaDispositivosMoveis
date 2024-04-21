@@ -86,7 +86,12 @@
         android:layout_marginTop="@dimen/top_default_margin"
         android:text="@string/login_buttom_forgotPw"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin"/>
 <!--        android:onclick="forgotPW"-->
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
+        android:onclick="forgotPW" />
+>>>>>>> d9e25f5 (Atualizado 20/04/2024)
 

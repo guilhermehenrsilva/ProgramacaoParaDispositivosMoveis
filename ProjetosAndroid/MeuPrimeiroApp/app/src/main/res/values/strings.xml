@@ -16,4 +16,8 @@
 
     <string name="login_user_name_empty">Nome de usario não pode ser vazio</string>
     <string name="login_user_pw_empty">Senha de usuario não pode ser vazio</string>
+<<<<<<< HEAD
+=======
+    <string name="login_user_wrong_user_name_or_pw">Nome de Usuario ou senha incorretos </string>
+>>>>>>> d9e25f5 (Atualizado 20/04/2024)
 </resources>
