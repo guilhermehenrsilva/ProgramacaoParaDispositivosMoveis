@@ -1,25 +1,25 @@
 package br.edu.ifsuldeminas.mch.calc;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.R.id;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import net.objecthunter.exp4j.Expression;
+
 import de.congrace.exp4j.Calculable;
 import de.congrace.exp4j.ExpressionBuilder;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-
     private static final String TAG = "ifsuldeminas.mch.calc";
-    private Button buttonIgual, buttonUm, buttonDois, buttonTres, buttonQuatro, buttonCinco,
-            buttonSeis, buttonSete, buttonOito, buttonNove, buttonZero, buttonPonto, buttonReset,
-            buttonAdicao, buttonSubtracao, buttonMultiplicacao, buttonDivisao, buttonLimpar;
-    ;
+    private Button buttonZero, buttonUm, buttonDois, buttonTres, buttonQuatro, buttonCinco,
+            buttonSeis, buttonSete, buttonOito, buttonNove, buttonVirgula, buttonIgual,
+            buttonSoma, buttonPorcento, buttonDelete, buttonReset,
+            buttonDivisao, buttonMultiplicacao, buttonSubtracao;
     private TextView textViewResultado;
     private TextView textViewUltimaExpressao;
 
@@ -28,47 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textViewResultado = findViewById(R.id.textViewResultadoID);
-        textViewUltimaExpressao = findViewById(R.id.textViewUltimaExpressaoID);
-
-        buttonIgual = findViewById(R.id.buttonIgualID);
-        buttonUm = findViewById(R.id.buttonUmID);
-        buttonDois = findViewById(R.id.buttonDoisID);
-        buttonTres = findViewById(R.id.buttonTresID);
-        buttonQuatro = findViewById(R.id.buttonQuatroID);
-        buttonCinco = findViewById(R.id.buttonCincoID);
-        buttonSeis = findViewById(R.id.buttonSeisID);
-        buttonSete = findViewById(R.id.buttonSeteID);
-        buttonOito = findViewById(R.id.buttonOitoID);
-        buttonNove = findViewById(R.id.buttonNoveID);
-        buttonZero = findViewById(R.id.buttonZeroID);
-        buttonPonto = findViewById(R.id.buttonVirgulaID);
-        buttonAdicao = findViewById(R.id.buttonSomaID);
-        buttonSubtracao = findViewById(R.id.buttonSubtracaoID);
-        buttonMultiplicacao = findViewById(R.id.buttonMultiplicacaoID);
-        buttonDivisao = findViewById(R.id.buttonDivisaoID);
-        buttonLimpar = findViewById(R.id.buttonResetID);
-
-
-
-
-        buttonIgual.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Calculable avaliadorExpressao = null;
-                try {
-                    String expressao = "5+1+4*2";
-                    avaliadorExpressao = new ExpressionBuilder(expressao).build();
-
-                    Double resultado = avaliadorExpressao.calculate();
-
-                    textViewUltimaExpressao.setText(expressao);
-                    textViewResultado.setText(resultado.toString());
-                } catch (Exception e) {
-                    Log.d(TAG, e.getMessage());
-                }
-            }
-        });
+        IniciarComponentes();
+        getSupportActionBar().hide();
 
         buttonZero.setOnClickListener(this);
         buttonUm.setOnClickListener(this);
@@ -80,16 +41,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonSete.setOnClickListener(this);
         buttonOito.setOnClickListener(this);
         buttonNove.setOnClickListener(this);
-        buttonPonto.setOnClickListener(this);
-        buttonAdicao.setOnClickListener(this);
-        buttonSubtracao.setOnClickListener(this);
-        buttonMultiplicacao.setOnClickListener(this);
+        buttonVirgula.setOnClickListener(this);
+        buttonSoma.setOnClickListener(this);
+        buttonPorcento.setOnClickListener(this);
         buttonDivisao.setOnClickListener(this);
-        buttonIgual.setOnClickListener(this);
+        buttonMultiplicacao.setOnClickListener(this);
+        buttonSubtracao.setOnClickListener(this);
 
-
-        buttonReset.setOnClickListener(new View.OnClickListener(){
-
+        buttonReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 textViewUltimaExpressao.setText("");
@@ -97,110 +56,152 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        buttonLimpar.setOnClickListener(new View.OnClickListener() {
+        buttonDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 TextView expressao = findViewById(R.id.textViewUltimaExpressaoID);
                 String string = expressao.getText().toString();
+                if(!string.isEmpty()){
 
-                if (!string.isEmpty()){
                     byte var0 = 0;
                     int var1 = string.length()-1;
-                    String textExpressao = string.substring(var0, var1);
-                    expressao.setText(textExpressao);
+                    String txtExpressao = string.substring(var0,var1);
+                    expressao.setText(txtExpressao);
                 }
                 textViewResultado.setText("");
             }
         });
 
-//        buttonIgual.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                try {
-//                    Expression expressao = new ExpressionBuilder(textViewUltimaExpressao.getText().toString()).build();
-//                    double resultado = expressao.evaluate();
-//
-//                    long longResult = (long) resultado;
-//                    if(resultado == (double) longResult){
-//                        textViewResultado.setText((CharSequence) String.valueOf(longResult));
-//                    }else{
-//                        textViewResultado.setText((CharSequence) String.valueOf(resultado));
-//                    }
-//                }catch (Exception e){
-//
-//                }
-//            }
-//        });
+        buttonIgual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                try {
+                    Calculable expressao = new ExpressionBuilder(textViewUltimaExpressao.getText().toString()).build();
+                    double resultado = expressao.calculate();
+                    long longResult = (long) resultado;
+
+                    if (resultado == (double) longResult) {
+                        textViewResultado.setText((CharSequence) String.valueOf(longResult));
+                        textViewUltimaExpressao.setText("");
+
+                    } else {
+                        textViewResultado.setText((CharSequence) String.valueOf(resultado));
+
+
+                    }
+
+                }catch (Exception e) {
+
+                }
+
+            }
+        });
+
+        textViewResultado.setText("");
 
     }
 
-    public void AcrescentarUmaExpressao(String string, boolean limpar_dados){
+    private void IniciarComponentes(){
+
+        textViewResultado = findViewById(R.id.textViewResultadoID);
+        textViewUltimaExpressao = findViewById(R.id.textViewUltimaExpressaoID);
+
+        buttonIgual = findViewById(R.id.buttonIgualID);
+        buttonZero = findViewById(R.id.buttonZeroID);
+        buttonUm = findViewById(R.id.buttonUmID);
+        buttonDois = findViewById(R.id.buttonDoisID);
+        buttonTres = findViewById(R.id.buttonTresID);
+        buttonQuatro = findViewById(R.id.buttonQuatroID);
+        buttonCinco = findViewById(R.id.buttonCincoID);
+        buttonSeis = findViewById(R.id.buttonSeisID);
+        buttonSete = findViewById(R.id.buttonSeteID);
+        buttonOito = findViewById(R.id.buttonOitoID);
+        buttonNove = findViewById(R.id.buttonNoveID);
+        buttonVirgula = findViewById(R.id.buttonVirgulaID);
+        buttonIgual = findViewById(R.id.buttonIgualID);
+        buttonSoma = findViewById(R.id.buttonSomaID);
+        buttonPorcento = findViewById(R.id.buttonPorcentoID);
+        buttonDelete = findViewById(R.id.buttonDeleteID);
+        buttonReset = findViewById(R.id.buttonResetID);
+        buttonDivisao = findViewById(R.id.buttonDivisaoID);
+        buttonMultiplicacao = findViewById(R.id.buttonMultiplicacaoID);
+        buttonSubtracao = findViewById(R.id.buttonSubtracaoID);
+    }
+
+    public void AcrescentarExpressao(String string, boolean limparDados){
+
         if (textViewResultado.getText().equals("")){
-            textViewUltimaExpressao.setText(" ");
+            textViewUltimaExpressao.setText((" "));
         }
-        if (limpar_dados){
+        if (limparDados){
             textViewResultado.setText(" ");
             textViewUltimaExpressao.append(string);
-        } else {
+
+        }else{
             textViewUltimaExpressao.append(textViewResultado.getText());
             textViewUltimaExpressao.append(string);
             textViewResultado.setText(" ");
         }
+
     }
 
     @Override
-    public void onClick(View view){
-        switch (view.getId()){
-            case R.id.buttonZeroID:
-             AcrescentarUmaExpressao("0", true );
+    public void onClick(View view) {
+     switch (view.getId()){
+         case R.id.buttonZeroID:
+             AcrescentarExpressao("0", true);
+             break;
+         case R.id.buttonUmID:
+             AcrescentarExpressao("1", true);
+             break;
+         case R.id.buttonDoisID:
+             AcrescentarExpressao("2", true);
+             break;
+         case R.id.buttonTresID:
+             AcrescentarExpressao("3", true);
+             break;
+         case R.id.buttonQuatroID:
+             AcrescentarExpressao("4", true);
+             break;
+         case R.id.buttonCincoID:
+             AcrescentarExpressao("5", true);
+             break;
+         case R.id.buttonSeisID:
+             AcrescentarExpressao("6", true);
+             break;
+         case R.id.buttonSeteID:
+             AcrescentarExpressao("7", true);
+             break;
+         case R.id.buttonOitoID:
+             AcrescentarExpressao("8", true);
+             break;
+         case R.id.buttonNoveID:
+             AcrescentarExpressao("9", true);
+             break;
+         case R.id.buttonVirgulaID:
+             AcrescentarExpressao(".", true);
              break;
 
-            case R.id.buttonUmID:
-                AcrescentarUmaExpressao("1", true);
-                break;
-            case R.id.buttonDoisID:
-                AcrescentarUmaExpressao("2", true);
-                break;
-            case R.id.buttonTresID:
-                AcrescentarUmaExpressao("3", true);
-                break;
-            case R.id.buttonQuatroID:
-                AcrescentarUmaExpressao("4", true);
-                break;
-            case R.id.buttonCincoID:
-                AcrescentarUmaExpressao("5", true);
-                break;
-            case R.id.buttonSeisID:
-                AcrescentarUmaExpressao("6", true);
-                break;
-            case R.id.buttonSeteID:
-                AcrescentarUmaExpressao("7", true);
-                break;
-            case R.id.buttonOitoID:
-                AcrescentarUmaExpressao("8", true);
-                break;
-            case R.id.buttonNoveID:
-                AcrescentarUmaExpressao("9", true);
-                break;
-            case R.id.buttonVirgulaID:ID:
-                AcrescentarUmaExpressao(".", true);
-                break;
-            case R.id.buttonSomaID:ID:
-                AcrescentarUmaExpressao("+", true);
-                break;
-            case R.id.buttonSubtracaoID:
-                AcrescentarUmaExpressao("-", true);
-                break;
-            case R.id.buttonMultiplicacaoID:
-                AcrescentarUmaExpressao("*", true);
-                break;
-            case R.id.buttonDivisaoID:
-                AcrescentarUmaExpressao("/", true);
-                break;
-            case R.id.buttonIgualID:
-                AcrescentarUmaExpressao("=",true);
-                break;
+         case R.id.buttonSomaID:
+             AcrescentarExpressao("+", false);
+             break;
 
-        }
-    }
+         case R.id.buttonSubtracaoID:
+             AcrescentarExpressao("-", false);
+             break;
+
+         case R.id.buttonPorcentoID:
+             AcrescentarExpressao("%", false);
+             break;
+         case R.id.buttonDivisaoID:
+             AcrescentarExpressao("/", false);
+             break;
+         case R.id.buttonMultiplicacaoID:
+             AcrescentarExpressao("*", false);
+             break;
+
+     }
+     }
+
 }

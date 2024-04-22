@@ -1,4 +1,4 @@
-#Sat Apr 20 20:17:44 BRT 2024
+#Mon Apr 22 17:06:38 BRT 2024
 base.0=C\:\\Users\\guilh\\Desktop\\Git Facul\\ProgramacaoParaDispositivosMoveis\\pdm-calc-layout\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\guilh\\Desktop\\Git Facul\\ProgramacaoParaDispositivosMoveis\\pdm-calc-layout\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\guilh\\Desktop\\Git Facul\\ProgramacaoParaDispositivosMoveis\\pdm-calc-layout\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
