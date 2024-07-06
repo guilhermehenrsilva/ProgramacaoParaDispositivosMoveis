@@ -17,8 +17,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3af233e3-76a1-42a7-a2f3-454e4a18db43" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ProjetosAndroid/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProjetosAndroid/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetosAndroid/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/edu/ifsuldeminas/mch/calc/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/edu/ifsuldeminas/mch/calc/MainActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

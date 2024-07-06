@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Utilizando Imagens no Android"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="294dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRÓXIMO"
+        app:cornerRadius="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        tools:layout_editor_absoluteX="268dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ANTERIOR"
+        app:cornerRadius="8dp"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="375dp"
+        android:layout_height="270dp"
+        android:text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellat magnam suscipit quisquam sit maxime ratione laborum unde officia expedita in blanditiis dolores, similique, hic dicta eos dolorem. At, magnam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellat magnam suscipit quisquam sit maxime ratione laborum unde officia expedita in blanditiis dolores, similique, hic dicta eos dolorem."
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guilherme Henrique"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="345dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="06/07/2024"
+        tools:layout_editor_absoluteX="322dp"
+        tools:layout_editor_absoluteY="342dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="412dp"
+        android:layout_height="233dp"
+        android:src="@drawable/android_14_"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="61dp" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
