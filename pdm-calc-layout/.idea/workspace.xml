@@ -16,16 +16,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3af233e3-76a1-42a7-a2f3-454e4a18db43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Trabalhos/app/src/main/java/com/example/trabalhos/MainActivity2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Trabalhos/app/src/main/res/drawable/_3987204.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Trabalhos/app/src/main/res/drawable/i7212.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Trabalhos/app/src/main/res/layout/activity_main2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Trabalhos/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Trabalhos/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Trabalhos/app/src/main/java/com/example/trabalhos/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Trabalhos/app/src/main/java/com/example/trabalhos/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Trabalhos/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Trabalhos/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3af233e3-76a1-42a7-a2f3-454e4a18db43" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

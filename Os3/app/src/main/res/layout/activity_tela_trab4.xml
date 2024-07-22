@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".tela_trab4">
+
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="451dp"
+    android:layout_height="54dp"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="?attr/actionBarTheme"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:text="CONSTRAINT LAYOUT ATIVIDADE 3"
+    android:textColor="#FAFAFA"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="184dp"
+    android:layout_height="435dp"
+    android:layout_marginTop="68dp"
+    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer neque nulla, congue nec magna eget, egestas finibus nunc. Proin tincidunt sed mi nec dictum. Pellentesque ultrices tincidunt justo eu varius. Donec mollis, metus quis aliquet dignissim, justo eros lobortis ipsum, varius efficitur neque quam in sapien. Suspendisse potenti. Morbi vel leo elit. Praesent nec pulvinar tortor.  Cras commodo sit amet nunc ac consectetur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse ut volutpat nulla. Nam et eros est. Proin felis neque, euismod n Etiam aliqua."
+    app:layout_constraintEnd_toStartOf="@+id/textView3"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+<androidx.constraintlayout.widget.Barrier
+    android:id="@+id/barrier"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:barrierDirection="left"
+    app:constraint_referenced_ids="textView2" />
+
+<TextView
+    android:id="@+id/textView3"
+    android:layout_width="174dp"
+    android:layout_height="434dp"
+    android:layout_marginTop="68dp"
+    android:text="Nullam gravida, massa at ullamcorper mattis, arcu urna cursus urna, a commodo sapien nunc non libero. Pellentesque in maximus felis. Aliquam at ex eget felis suscipit blandit vel eget dolor.Nam posuere diam vel arcu vulputate, nec maximus ex ultricies. Vestibulum pulvinar arcu nec diam feugiat, id tempor tortor placerat. Nunc fermentum elit ante, ut viverra justo gravida eu. Nunc ut diam sit amet purus maximus rutrum sagittis quis dolor. Quisque efficitur lectus eu scelerisque vulputate. Donec sodales orci in iEtiam pretium scelerisque odio nec viverra. Nullam a consectetur ex. Sed eleifend pretium dolor. "
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/textView2"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+<Button
+    android:id="@+id/button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="76dp"
+    android:text="Esquerda"
+    app:cornerRadius="10dp"
+    app:layout_constraintEnd_toStartOf="@+id/button2"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+<Button
+    android:id="@+id/button2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="76dp"
+    android:text="Empate"
+    app:cornerRadius="10dp"
+    app:layout_constraintEnd_toStartOf="@+id/button3"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/button"
+    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+<Button
+    android:id="@+id/button3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="76dp"
+    android:text="Direita"
+    app:cornerRadius="10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/button2"
+    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
