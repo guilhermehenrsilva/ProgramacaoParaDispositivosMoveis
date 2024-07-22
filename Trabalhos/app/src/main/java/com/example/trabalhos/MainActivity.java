@@ -1,11 +1,11 @@
 package com.example.trabalhos;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         Button button3 = findViewById(R.id.button3);
 
 
+
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,22 +28,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       /* button_trab2.setOnClickListener(new View.OnClickListener() {
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, tela_trab_3.class);
+                Intent intent = new Intent(MainActivity.this, MainActivity3.class);
                 startActivity(intent);
             }
         });
 
-        button_trab3.setOnClickListener(new View.OnClickListener() {
+        button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, tela_trab4.class);
+                Intent intent = new Intent(MainActivity.this, MainActivity4.class);
                 startActivity(intent);
             }
-        });*/
+        });
     }
 }
