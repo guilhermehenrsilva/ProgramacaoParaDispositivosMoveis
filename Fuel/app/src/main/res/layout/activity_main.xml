@@ -105,10 +105,12 @@
         android:id="@+id/imageViewShare"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="32dp"
+        android:tint="#575454"
         app:layout_constraintBottom_toBottomOf="@+id/textViewMessage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textViewMessage"
+        app:layout_constraintVertical_bias="0.551"
         app:srcCompat="@drawable/share" />
 
     <TextView
