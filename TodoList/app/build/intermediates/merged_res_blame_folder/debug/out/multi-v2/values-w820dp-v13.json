@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "br.edu.ifsuldeminas.mch.tarefas.app-mergeDebugResources-29:/values-w820dp-v13/values-w820dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\guilh\\Desktop\\Git Facul\\ProgramacaoParaDispositivosMoveis\\TodoList\\app\\src\\main\\res\\values-w820dp\\strings.xml",
+                    "from": {
+                        "startLines": "3,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "117,57",
+                        "endColumns": "55,58",
+                        "endOffsets": "168,111"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,111",
+                        "endColumns": "55,58",
+                        "endOffsets": "106,165"
+                    }
+                }
+            ]
+        }
+    ]
+}
