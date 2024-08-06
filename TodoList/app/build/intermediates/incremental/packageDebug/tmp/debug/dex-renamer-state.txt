@@ -1,4 +1,4 @@
-#Tue Jul 30 09:43:20 BRT 2024
+#Tue Aug 06 10:06:52 BRT 2024
 base.0=C\:\\Users\\guilh\\Desktop\\Git Facul\\ProgramacaoParaDispositivosMoveis\\TodoList\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\guilh\\Desktop\\Git Facul\\ProgramacaoParaDispositivosMoveis\\TodoList\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\guilh\\Desktop\\Git Facul\\ProgramacaoParaDispositivosMoveis\\TodoList\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex

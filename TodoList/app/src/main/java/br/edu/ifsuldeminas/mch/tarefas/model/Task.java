@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Task implements Serializable {
 
-    private int id;
+    private Integer id;
     private String description;
     private Boolean active;
 
@@ -12,10 +12,18 @@ public class Task implements Serializable {
         this.active = true;
     }
 
-    public Task(int id, String desc, Boolean act) {
+    public Task(int id, String desc) {
         this.id = id;
-        this.description = desc;
-        this.active = act;
+        setDescription(desc);
+        this.setActive(true);
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getDescription() {
@@ -26,11 +34,16 @@ public class Task implements Serializable {
         this.description = description;
     }
 
-    public Boolean getActive() {
+    public Boolean isActive() {
         return active;
     }
 
     public void setActive(Boolean active) {
         this.active = active;
+    }
+
+    @Override
+    public String toString() {
+        return this.getDescription();
     }
 }
